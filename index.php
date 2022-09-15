@@ -1,5 +1,4 @@
 <?php
-
 require("dbBroker.php");
 require("model/user.php");
 

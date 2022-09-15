@@ -54,10 +54,10 @@ if ($podaci->num_rows == 0) {
 
                 ?>
                     <tr>
-                        <td><?php echo $red["ID"] ?></td>
-                        <td><?php echo $red["Name"] ?></td>
-                        <td><?php echo $red["Semester"] ?></td>
-                        <td><?php echo $red["ESPB"] ?></td>
+                        <td><?php echo $red["id"] ?></td>
+                        <td><?php echo $red["name"] ?></td>
+                        <td><?php echo $red["semester"] ?></td>
+                        <td><?php echo $red["espb"] ?></td>
                     </tr>
             <?php
                 endwhile;
