@@ -54,14 +54,14 @@ if ($podaci->num_rows == 0) {
                 </div>
                 <div style="padding-right: 3rem; padding-top: 3px; ">
                     <label for="subjectss">Select subject:</label>
-                    <select name="SubjectID" id="subjectss">
+                    <select name="subjectid" id="subjectss">
                         <option value="all">All</option>
 
                         <?php
                         $data = Subject::getAll($conn);
                         while ($row = $data->fetch_array()) :
                         ?>
-                            <option value="<?php echo $row["ID"] ?>"><?php echo $row["Name"] ?></option>
+                            <option value="<?php echo $row["id"] ?>"><?php echo $row["name"] ?></option>
                         <?php endwhile; ?>
                     </select>
                     <button id="btn-search" onclick="filterTable()" style="font-weight: bold; background-color: transparent; border-color: transparent;"><img src="img/zoom.png"></img></button>
@@ -84,22 +84,22 @@ if ($podaci->num_rows == 0) {
 
                     ?>
                         <tr">
-                            <td><?php $id = $red["StudentID"];
+                            <td><?php $id = $red["studentId"];
                                 $data = Student::getById($id, $conn);
                                 $result = $data->fetch_array();
-                                echo $result["Indeks"] ?></td>
-                            <td id="<?php echo $red["SubjectID"] ?>"><?php $id = $red["SubjectID"];
+                                echo $result["indeks"] ?></td>
+                            <td id="<?php echo $red["subjectId"] ?>"><?php $id = $red["subjectId"];
                                                                     $data = Subject::getById($id, $conn);
                                                                     $result = $data->fetch_array();
                                                                     echo $result["Name"] ?></td>
-                            <td><?php $id = $red["LecturerID"];
+                            <td><?php $id = $red["lecturerId"];
                                 $data = Lecturer::getById($id, $conn);
                                 $result = $data->fetch_array();
-                                echo ($result["FirstName"] . " " . $result["LastName"]) ?></td>
-                            <td><?php echo $red["Date"] ?></td>
-                            <td><?php echo $red["Grade"] ?></td>
+                                echo ($result["firstname"] . " " . $result["lastname"]) ?></td>
+                            <td><?php echo $red["date"] ?></td>
+                            <td><?php echo $red["grade"] ?></td>
                             <td style="padding-left: 1rem;">
-                                <button id="deleteBtn" value="<?php echo $red["ID"] ?>" onclick="deleteLecturer(this)" style="background-color: rgb(214, 198, 183); border-radius: 8px; border-color: transparent"><img src="img/delete.png"></img></button>
+                                <button id="deleteBtn" value="<?php echo $red["id"] ?>" onclick="deleteLecturer(this)" style="background-color: rgb(214, 198, 183); border-radius: 8px; border-color: transparent"><img src="img/delete.png"></img></button>
                             </td>
                             </tr>
                     <?php
@@ -134,7 +134,7 @@ if ($podaci->num_rows == 0) {
                                                     while ($red = $podaci->fetch_array()) :
                                                     ?>
 
-                                                        <option value="<?php echo $red["ID"] ?>"><?php echo $red["Indeks"] ?></option>
+                                                        <option value="<?php echo $red["id"] ?>"><?php echo $red["indeks"] ?></option>
 
                                                     <?php endwhile; ?>
                                                     ?>
@@ -149,7 +149,7 @@ if ($podaci->num_rows == 0) {
                                                     while ($red = $podaci->fetch_array()) :
                                                     ?>
 
-                                                        <option value="<?php echo $red["ID"] ?>"><?php echo $red["Name"] ?></option>
+                                                        <option value="<?php echo $red["id"] ?>"><?php echo $red["name"] ?></option>
 
                                                     <?php endwhile; ?>
                                                     ?>
@@ -164,7 +164,7 @@ if ($podaci->num_rows == 0) {
                                                     while ($red = $podaci->fetch_array()) :
                                                     ?>
 
-                                                        <option value="<?php echo $red["ID"] ?>"><?php echo ($red["FirstName"] . " " . $red["LastName"]) ?></option>
+                                                        <option value="<?php echo $red["id"] ?>"><?php echo ($red["firstname"] . " " . $red["lastname"]) ?></option>
 
                                                     <?php endwhile; ?>
                                                     ?>

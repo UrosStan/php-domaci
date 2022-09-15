@@ -58,9 +58,9 @@ if ($podaci->num_rows == 0) {
 
                     ?>
                         <tr">
-                            <td><?php echo $red["Indeks"] ?></td>
-                            <td><?php echo $red["FirstName"] ?></td>
-                            <td><?php echo $red["LastName"] ?></td>
+                            <td><?php echo $red["indeks"] ?></td>
+                            <td><?php echo $red["firstName"] ?></td>
+                            <td><?php echo $red["lastName"] ?></td>
                             <td>
                                 <label class="custom-radio-btn">
                                     <input type="radio" name="checked-donut" value=<?php echo $red["ID"] ?>>

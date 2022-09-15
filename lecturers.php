@@ -86,9 +86,9 @@ if ($data->num_rows == 0) {
 
             ?>
                 <tr class="ltr">
-                    <td><?php echo $red["FirstName"] ?></td>
-                    <td><?php echo $red["LastName"] ?></td>
-                    <td><?php echo $red["JMBG"] ?></td>
+                    <td><?php echo $red["firstName"] ?></td>
+                    <td><?php echo $red["lastName"] ?></td>
+                    <td><?php echo $red["jmbg"] ?></td>
                     <td style="width: 12%;">
                         <div class="w3-container">
 
