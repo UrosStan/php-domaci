@@ -1,0 +1,51 @@
+body {
+    background-color: #FAEBD7;
+}
+
+button {
+    margin-bottom: 7%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+}
+
+tr {
+    border-bottom: 1.5px solid lightskyblue;
+}
+
+tr:first-child {
+    background-color: lightskyblue;
+}
+
+tr:not(:first-child):hover {
+    background-color: #D6EEEE;
+}
+
+#addBtn:hover {
+    cursor: pointer;
+    padding: 6px 5px 6px 5px;
+}
+
+#updateBtn:hover {
+    cursor: pointer;
+}
+
+#deleteBtn:hover {
+    cursor: pointer;
+}
+
+
+/* tr:nth-child(even) {
+    background-color: #dddddd;
+} */
