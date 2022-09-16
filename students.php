@@ -63,7 +63,7 @@ if ($podaci->num_rows == 0) {
                             <td><?php echo $red["lastName"] ?></td>
                             <td>
                                 <label class="custom-radio-btn">
-                                    <input type="radio" name="checked-donut" value=<?php echo $red["ID"] ?>>
+                                    <input type="radio" name="checked-donut" value=<?php echo $red["id"] ?>>
                                     <span class="checkmark"></span>
                                 </label>
                             </td>

@@ -54,7 +54,7 @@ if ($podaci->num_rows == 0) {
                 </div>
                 <div style="padding-right: 3rem; padding-top: 3px; ">
                     <label for="subjectss">Select subject:</label>
-                    <select name="subjectid" id="subjectss">
+                    <select name="subjectId" id="subjectss">
                         <option value="all">All</option>
 
                         <?php
@@ -91,11 +91,11 @@ if ($podaci->num_rows == 0) {
                             <td id="<?php echo $red["subjectId"] ?>"><?php $id = $red["subjectId"];
                                                                     $data = Subject::getById($id, $conn);
                                                                     $result = $data->fetch_array();
-                                                                    echo $result["Name"] ?></td>
+                                                                    echo $result["name"] ?></td>
                             <td><?php $id = $red["lecturerId"];
                                 $data = Lecturer::getById($id, $conn);
                                 $result = $data->fetch_array();
-                                echo ($result["firstname"] . " " . $result["lastname"]) ?></td>
+                                echo ($result["firstName"] . " " . $result["lastName"]) ?></td>
                             <td><?php echo $red["date"] ?></td>
                             <td><?php echo $red["grade"] ?></td>
                             <td style="padding-left: 1rem;">
@@ -128,7 +128,7 @@ if ($podaci->num_rows == 0) {
                                             </div> -->
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">
                                                 <label for="students">Student:</label>
-                                                <select name="StudentID" id="students">
+                                                <select name="studentid" id="students">
                                                     <?php
                                                     $podaci = Student::getAll($conn);
                                                     while ($red = $podaci->fetch_array()) :
@@ -143,7 +143,7 @@ if ($podaci->num_rows == 0) {
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">
                                                 <label for="subjects">Subject:</label>
-                                                <select name="SubjectID" id="subjects">
+                                                <select name="subjectId" id="subjects">
                                                     <?php
                                                     $podaci = Subject::getAll($conn);
                                                     while ($red = $podaci->fetch_array()) :
@@ -158,13 +158,13 @@ if ($podaci->num_rows == 0) {
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">
                                                 <label for="lecturers">Lecturer:</label>
-                                                <select name="LecturerID" id="lecturers">
+                                                <select name="lecturerid" id="lecturers">
                                                     <?php
                                                     $podaci = Lecturer::getAll($conn);
                                                     while ($red = $podaci->fetch_array()) :
                                                     ?>
 
-                                                        <option value="<?php echo $red["id"] ?>"><?php echo ($red["firstname"] . " " . $red["lastname"]) ?></option>
+                                                        <option value="<?php echo $red["id"] ?>"><?php echo ($red["firstName"] . " " . $red["lastName"]) ?></option>
 
                                                     <?php endwhile; ?>
                                                     ?>
@@ -208,13 +208,13 @@ if ($podaci->num_rows == 0) {
 
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">
                                                 <label for="subjects">Subject:</label>
-                                                <select name="SubjectID" id="subjectss">
+                                                <select name="subjectId" id="subjectss">
                                                     <?php
                                                     $podaci = Subject::getAll($conn);
                                                     while ($red = $podaci->fetch_array()) :
                                                     ?>
 
-                                                        <option value="<?php echo $red["ID"] ?>"><?php echo $red["Name"] ?></option>
+                                                        <option value="<?php echo $red["id"] ?>"><?php echo $red["name"] ?></option>
 
                                                     <?php endwhile; ?>
                                                     ?>

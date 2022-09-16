@@ -30,12 +30,12 @@ class Lecturer{
     }
 
     public function update($id, mysqli $conn){
-        $query = "UPDATE lecturer SET FirstName='$this->firstName', LastName = '$this->lastName', JMBG = '$this->jmbg' WHERE id='$id'";
+        $query = "UPDATE lecturer SET firstName='$this->firstName', lastName = '$this->lastName', jmbg = '$this->jmbg' WHERE id='$id'";
         return $conn->query($query);
     }
 
     public static function add(Lecturer $lecturer, mysqli $conn){
-        $query = "INSERT INTO lecturer(FirstName, LastName, JMBG) VALUES ('$lecturer->firstName', '$lecturer->lastName', '$lecturer->jmbg')";
+        $query = "INSERT INTO lecturer(firstName, lastName, jmbg) VALUES ('$lecturer->firstName', '$lecturer->lastName', '$lecturer->jmbg')";
         return $conn->query($query);
     }
 

@@ -35,17 +35,17 @@ class Student{
     }
 
     public function update($id, mysqli $conn){
-        $query = "UPDATE student SET FirstName='$this->firstName', LastName = '$this->lastName', Indeks = '$this->indeks' WHERE id='$id'";
+        $query = "UPDATE student SET firstName='$this->firstName', lastName = '$this->lastName', indeks = '$this->indeks' WHERE id='$id'";
         return $conn->query($query);
     }
 
     public static function add(Student $student, mysqli $conn){
-        $query = "INSERT INTO student(FirstName, LastName, Indeks) VALUES ('$student->firstName', '$student->lastName', '$student->indeks')";
+        $query = "INSERT INTO student(firstName, lastName, indeks) VALUES ('$student->firstName', '$student->lastName', '$student->indeks')";
         return $conn->query($query);
     }
 
     public static function getAllIndexes(mysqli $conn){
-        $query = "SELECT Indeks FROM student";
+        $query = "SELECT indeks FROM student";
         return $conn->query($query);
     }
 

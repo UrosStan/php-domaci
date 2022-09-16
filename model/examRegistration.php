@@ -30,7 +30,7 @@ class ExamRegistration{
     }
 
     public static function getByStudentAndSubjectIDs($studentId, $subjectId, mysqli $conn){
-        $query = "SELECT * FROM examregistration WHERE StudentID=$studentId AND SubjectID = $subjectId AND Grade>5";
+        $query = "SELECT * FROM examregistration WHERE studentId=$studentId AND subjectId = $subjectId AND Grade>5";
         return $conn->query($query);
     }
 
@@ -40,7 +40,8 @@ class ExamRegistration{
     }
 
     public static function add(ExamRegistration $examRegistration, mysqli $conn){
-        $query = "INSERT INTO examregistration(Date, Grade, SubjectID, StudentID, LecturerID) VALUES (CURRENT_DATE, $examRegistration->grade, $examRegistration->subjectId,  $examRegistration->studentId, $examRegistration->lecturerId)";
+        debug_zval_dump($examRegistration);
+        $query = "INSERT INTO examregistration(date, grade, subjectId, studentId, lecturerId) VALUES ('16-09-2022', $examRegistration->grade, $examRegistration->subjectId,  $examRegistration->studentId, $examRegistration->lecturerId)";
         return $conn->query($query);
     }
 }

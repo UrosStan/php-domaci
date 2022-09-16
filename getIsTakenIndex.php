@@ -10,7 +10,7 @@ if ($indexes->num_rows == 0) {
     echo "";
 } else {
     while ($row = $indexes->fetch_array()) {
-        if($row['Indeks'] == $q){
+        if($row['indeks'] == $q){
             echo "Taken";
             die();
         }

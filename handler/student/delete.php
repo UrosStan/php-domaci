@@ -2,8 +2,8 @@
 require "../../dbBroker.php";
 require "../../model/student.php";
 
-if(isset($_POST["ID"])){
-    $status = Student::deleteById($_POST["ID"],$conn);
+if(isset($_POST["id"])){
+    $status = Student::deleteById($_POST["id"],$conn);
 
     if($status){
         echo "Success";

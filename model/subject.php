@@ -30,12 +30,12 @@ class Subject{
     }
 
     public function update($id, mysqli $conn){
-        $query = "UPDATE subject SET Name='$this->name', Semester = '$this->semester', ESPB = '$this->espb' WHERE id='$id'";
+        $query = "UPDATE subject SET Name='$this->name', semester = '$this->semester', espb = '$this->espb' WHERE id='$id'";
         return $conn->query($query);
     }
 
     public static function add(Subject $subject, mysqli $conn){
-        $query = "INSERT INTO subject(Name, Semester, ESPB) VALUES ('$subject->name', '$subject->semester', '$subject->espb')";
+        $query = "INSERT INTO subject(Name, semester, espb) VALUES ('$subject->name', '$subject->semester', '$subject->espb')";
         return $conn->query($query);
     }
 
