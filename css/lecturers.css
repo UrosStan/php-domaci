@@ -21,11 +21,11 @@ th {
 }
 
 tr {
-    border-bottom: 1.5px solid lightskyblue;
+    border-bottom: 1.5px solid rgb(83, 146, 185);
 }
 
 tr:first-child {
-    background-color: lightskyblue;
+    background-color: rgb(151, 188, 211);
 }
 
 tr:not(:first-child):hover {

@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to right, #FFEFD5, #CD853F);
+    background-image: linear-gradient(to right, rgb(151, 188, 211), #CD853F);
     display: grid;
     grid-template-columns: auto;
     margin-bottom: 5%;

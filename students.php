@@ -40,7 +40,7 @@ if ($podaci->num_rows == 0) {
 
     <body>
         <div w3-include-html="menu.html" id="w3"></div>
-        <div>
+        <div style = "text-align: center;">
             <img src="img/students2.jpg"></img>
         </div>
         <div class="body-wrap">
