@@ -9,7 +9,7 @@ function deleteStudent() {
         request = $.ajax({
             url: 'handler/student/delete.php',
             type: 'post',
-            data: { 'ID': checked.val() }
+            data: { 'id': checked.val() }
         });
 
         request.done(function(response, textStatus, jqXHR) {

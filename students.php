@@ -91,13 +91,13 @@ if ($podaci->num_rows == 0) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
+                                                <input id="firstName" type="text" name="firstName" class="form-control" placeholder="First name" value="" />
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
+                                                <input id="lastName" type="text" name="lastName" class="form-control" placeholder="Last name" value="" />
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="Indeks" type="text" onkeyup="isTaken(this.value)" name="Indeks" class="form-control" placeholder="Index" value="" />
+                                                <input id="indeks" type="text" onkeyup="isTaken(this.value)" name="indeks" class="form-control" placeholder="Index" value="" />
                                                 <span id="txtIsTaken" style="color: red;"></span>
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
@@ -130,10 +130,10 @@ if ($podaci->num_rows == 0) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="FirstName" type="text" name="FirstName" class="form-control" placeholder="First name" value="" />
+                                                <input id="firstName" type="text" name="firstName" class="form-control" placeholder="First name" value="" />
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="LastName" type="text" name="LastName" class="form-control" placeholder="Last name" value="" />
+                                                <input id="lastName" type="text" name="lastName" class="form-control" placeholder="Last name" value="" />
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
                                                 <button id="btnUpdate" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Submit

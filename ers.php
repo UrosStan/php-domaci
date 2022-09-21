@@ -124,11 +124,11 @@ if ($podaci->num_rows == 0) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <!-- <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Indeks" value="" />
+                                                <input id="indeks" type="text" name="indeks" class="form-control" placeholder="indeks" value="" />
                                             </div> -->
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">
                                                 <label for="students">Student:</label>
-                                                <select name="studentid" id="students">
+                                                <select name="studentId" id="students">
                                                     <?php
                                                     $podaci = Student::getAll($conn);
                                                     while ($red = $podaci->fetch_array()) :
@@ -158,7 +158,7 @@ if ($podaci->num_rows == 0) {
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">
                                                 <label for="lecturers">Lecturer:</label>
-                                                <select name="lecturerid" id="lecturers">
+                                                <select name="lecturerId" id="lecturers">
                                                     <?php
                                                     $podaci = Lecturer::getAll($conn);
                                                     while ($red = $podaci->fetch_array()) :
@@ -172,7 +172,7 @@ if ($podaci->num_rows == 0) {
                                                 </select>
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">
-                                                <input id="Grade" type="text" name="Grade" class="form-control" placeholder="Grade" value="" />
+                                                <input id="grade" type="text" name="grade" class="form-control" placeholder="grade" value="" />
                                             </div>
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
                                                 <button id="btnSave" type="submit" class="btn btn-success btn-block" style="color: white; background-color: teal; border: 1px solid white; padding: 0.5rem 3rem 0.5rem 3rem">Save
@@ -203,7 +203,7 @@ if ($podaci->num_rows == 0) {
                                     <div class="row">
                                         <div class="col-md-12">
                                             <!-- <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem;">
-                                                <input id="Indeks" type="text" name="Indeks" class="form-control" placeholder="Indeks" value="" />
+                                                <input id="indeks" type="text" name="indeks" class="form-control" placeholder="indeks" value="" />
                                             </div> -->
 
                                             <div class="form-group" style="padding-top: 0.3rem; padding-bottom: 0.3rem; text-align: left;">

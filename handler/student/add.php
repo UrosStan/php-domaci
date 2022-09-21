@@ -3,9 +3,9 @@ require "../../dbBroker.php";
 require "../../model/student.php";
 require "../../model/validation.php";
 
-if (isset($_POST["FirstName"]) && isset($_POST["LastName"]) && isset($_POST["Indeks"])) {
-    if (validateName($_POST["FirstName"]) == 1 && validateName($_POST["LastName"]) == 1 && validateIndex($_POST["Indeks"]) == 1) {
-        $student = new Student(null, $_POST["FirstName"], $_POST["LastName"], $_POST["Indeks"]);
+if (isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["indeks"])) {
+    if (validateName($_POST["firstName"]) == 1 && validateName($_POST["lastName"]) == 1 && validateIndex($_POST["indeks"]) == 1) {
+        $student = new Student(null, $_POST["firstName"], $_POST["lastName"], $_POST["indeks"]);
         $status = Student::add($student, $conn);
 
         if ($status) {

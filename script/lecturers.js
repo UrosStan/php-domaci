@@ -5,7 +5,7 @@ function deleteLecturer($button) {
     request = $.ajax({
         url: 'handler/lecturer/delete.php',
         type: 'post',
-        data: { 'ID': fired_btn_value }
+        data: { 'id': fired_btn_value }
     });
 
     request.done(function(response, textStatus, jqXHR) {

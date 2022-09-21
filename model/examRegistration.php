@@ -30,7 +30,7 @@ class ExamRegistration{
     }
 
     public static function getByStudentAndSubjectIDs($studentId, $subjectId, mysqli $conn){
-        $query = "SELECT * FROM examregistration WHERE studentId=$studentId AND subjectId = $subjectId AND Grade>5";
+        $query = "SELECT * FROM examregistration WHERE studentId=$studentId AND subjectId = $subjectId AND grade>5";
         return $conn->query($query);
     }
 

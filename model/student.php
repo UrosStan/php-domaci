@@ -25,7 +25,7 @@ class Student{
     }
 
     public static function getIndexById($id, mysqli $conn){
-        $query = "SELECT Indeks FROM student WHERE id=$id";
+        $query = "SELECT indeks FROM student WHERE id=$id";
         return $conn->query($query);
     }
 

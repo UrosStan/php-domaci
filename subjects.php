@@ -42,7 +42,7 @@ if ($podaci->num_rows == 0) {
         <table id="subjects-table">
             <thead class="thead">
                 <tr>
-                    <th scope="col">ID</th>
+                    <th scope="col">id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Semester</th>
                     <th scope="col">ESPB</th>
