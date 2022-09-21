@@ -40,7 +40,7 @@ class ExamRegistration{
     }
 
     public static function add(ExamRegistration $examRegistration, mysqli $conn){
-        $query = "INSERT INTO examregistration(date, grade, subjectId, studentId, lecturerId) VALUES ('16-09-2022', $examRegistration->grade, $examRegistration->subjectId,  $examRegistration->studentId, $examRegistration->lecturerId)";
+        $query = "INSERT INTO examregistration(date, grade, subjectId, studentId, lecturerId) VALUES ('21-09-2022', $examRegistration->grade, $examRegistration->subjectId,  $examRegistration->studentId, $examRegistration->lecturerId)";
         return $conn->query($query);
     }
 }
